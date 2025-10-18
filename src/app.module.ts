@@ -121,8 +121,8 @@ const useCases = [
       host: 'localhost',
       port: 3423,
       username: 'postgres',
-      password: 'sa',
-      database: 'Incubator App',
+      password: /*'sa'*/ process.env.POSTGRES_PASSWORD,
+      database: /*'Incubator App'*/ process.env.POSTGRES_DB,
       ssl: false,
       extra: {
         ssl: false, // Some clients require this extra flag
